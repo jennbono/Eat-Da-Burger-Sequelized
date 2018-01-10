@@ -1,0 +1,21 @@
+body {
+	background-color: #f8d17e;
+}
+
+h1, h2 {
+	font-family: 'Shadows Into Light', cursive;
+	color: #c01620;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+.burgerName, .devourBurger {
+	font-family: 'Boogaloo', cursive;
+	font-size: 20px;
+}
+
+.image {
+	max-height: 100px;
+}
