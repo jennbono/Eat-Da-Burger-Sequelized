@@ -1,23 +1,31 @@
-var orm = require("../config/orm.js");
+// var orm = require("../config/orm.js");
 
-var burger = {
-  selectAll: function(callback) {
-    orm.selectAll("burgers", function(result) {
-      callback(result);
-    });
-  },
+// var burger = {
+//   selectAll: function(callback) {
+//     orm.selectAll("burgers", function(result) {
+//       callback(result);
+//     });
+//   },
 
-insertOne: function(cols, vals, callback) {
-    orm.insertOne("burgers", cols, vals, function(result) {
-      callback(result);
-    });
-  },
+// insertOne: function(cols, vals, callback) {
+//     orm.insertOne("burgers", cols, vals, function(result) {
+//       callback(result);
+//     });
+//   },
   
-  updateOne: function(objColVals, condition, callback) {
-    orm.updateOne("burgers", objColVals, condition, function(result) {
-      callback(result);
-    });
-  },
-};
+//   updateOne: function(objColVals, condition, callback) {
+//     orm.updateOne("burgers", objColVals, condition, function(result) {
+//       callback(result);
+//     });
+//   },
+// };
 
-module.exports = burger;
+// module.exports = burger;
+
+module.exports = function(sequelize, DataTypes) {
+  var burger = sequelize.define("burger", {
+    burger_name: DataTypes.STRING,
+    devoured: DataTypes.BOOLEAN
+  });
+  return burger;
+};
