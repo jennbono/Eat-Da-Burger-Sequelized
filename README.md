@@ -2,4 +2,4 @@
 
 Add different types of burgers to the database to then be devoured with sequelized added!
 
-Heroku link:
+Heroku link: https://arcane-beyond-88951.herokuapp.com/
